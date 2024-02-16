@@ -1,0 +1,12 @@
+file_format: "1"
+id: oddball
+name: Oddball
+type: shield
+url: https://github.com/atulloh/oddball
+requires: [pro_micro]
+features:
+  - keys
+  - pointer
+siblings:
+  - oddball_left
+  - oddball_right
