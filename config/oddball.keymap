@@ -122,7 +122,7 @@
 &to 1  &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y         &kp U              &kp I                &kp O                    &hm LG(LS(V)) P      &to 4
 &to 3  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H         &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON  &to 2
 &to 0  &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N         &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &to 5
-                                       &ltq 1 BACKSPACE    &ltq 3 SPACE       &ltq 2 ENTER
+                                       &ltq 1 BACKSPACE    &ltq 3 TAB      &ltq 3 SPACE       &ltq 2 ENTER
             >;
         };
 
@@ -132,7 +132,7 @@
 &to 0  &trans  &trans    &kp UP        &kp EQUAL  &trans               &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 4
 &to 3  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &bt BT_CLR    &trans        &trans        &trans        &to 2
 &to 1  &trans  &trans    &out OUT_TOG  &trans     &kp C_VOLUME_DOWN    &kp C_BRI_DEC         &trans        &trans        &trans        &trans        &to 5
-                                       &trans     &trans               &trans
+                                       &trans     &trans       &trans        &trans
             >;
         };
 
@@ -142,7 +142,7 @@
 &to 1  &kp EXCL      &kp AT        &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS         &kp ASTERISK  &kp LPAR                        &kp RPAR                   &to 4
 &to 3  &kp ESCAPE    &kp CAPSLOCK  &kp HOME  &kp END   &kp UNDERSCORE    &kp MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP   &kp PAGE_DOWN                   &as PIPE NON_US_BACKSLASH  &to 0
 &to 2  &out OUT_TOG  &bootloader   &trans    &trans    &kp TILDE         &kp GRAVE  &as PLUS EQUAL   &kp SQT       &as DOUBLE_QUOTES SINGLE_QUOTE  &kp DELETE                 &to 5
-                                   &trans     &trans               &trans
+                                   &trans     &trans       &trans        &trans
             >;
         };
 
@@ -152,7 +152,7 @@
 &to 1  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &to 4
 &to 0  &kp LG(A)     &kp LG(S)     &kp LG(D)     &kp LG(F)     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &kp F6        &kp F7        &kp F8        &to 2
 &to 3  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp F1           &kp F2        &kp F3        &kp F4        &to 5
-                                   &trans     &trans               &trans
+                                   &trans     &trans       &trans        &trans
             >;
         };
 
@@ -162,7 +162,7 @@
 &to 1  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp LC(RA(Y))  &kp LC(RA(U))  &kp LC(RA(I))  &kp LC(RA(H))  &kp LC(RA(J))  &to 0
 &to 3  &kp L         &kp O         &kp Y         &kp K         &kp G           &trans         &trans         &trans         &trans         &trans         &to 2
 &to 4  &none         &to 0         &none         &kp NUMBER_6  &kp NUMBER_7    &trans         &trans         &trans         &trans         &trans         &to 5
-                                   &trans     &trans               &trans
+                                   &trans     &trans       &trans        &trans
             >;
         };
 
@@ -171,7 +171,7 @@
 &to 1  &trans  &trans          &msc SCRL_UP    &trans           &trans       &trans  &trans          &mmv MOVE_UP    &trans           &trans  &to 4
 &to 3  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans       &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &to 2
 &to 5  &trans  &trans          &trans          &trans           &trans       &trans  &trans          &trans          &trans           &trans  &to 0
-                               &mkp LCLK           &mkp RCLK    &trans
+                           &trans    &mkp LCLK           &mkp RCLK    &trans
             >;
         };
     };
