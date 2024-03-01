@@ -439,27 +439,27 @@ parse_config:
       shifted: $$mdi:content-copy$$
     # Mouse
     "&msc SCRL_UP":
-      tab: $$mdi:page-layout-header$$
+      tap: $$mdi:pan-up$$
       hold: ''
       shifted: ''
     "&msc SCRL_DOWN":
-      tab: $$mdi:page-layout-footer$$
+      tap: $$mdi:pan-down$$
       hold: ''
       shifted: ''
     "&msc SCRL_LEFT":
-      tab: $$mdi:chevron-double-left$$
+      tap: $$mdi:pan-left$$
       hold: ''
       shifted: ''
     "&msc SCRL_RIGHT":
-      tab: $$mdi:chevron-double-right$$
+      tap: $$mdi:pan-right$$
       hold: ''
       shifted: ''
     "&mkp LCLK":
-      tab: $$mdi:mouse-left-click-outline$$
+      tap: $$mdi:mouse-left-click-outline$$
     "&mkp RCLK":
-      tab: $$mdi:mouse-right-click-outline$$
+      tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
-      tab: $$mdi:mouse-scroll-wheel$$
+      tap: $$mdi:mouse-scroll-wheel$$
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
