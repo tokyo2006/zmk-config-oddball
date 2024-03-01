@@ -170,11 +170,11 @@ layers:
   - '3'
   - '4'
   - '5'
-  - LC(RA(Y))
-  - LC(RA(U))
-  - LC(RA(I))
-  - LC(RA(H))
-  - LC(RA(J))
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - L
