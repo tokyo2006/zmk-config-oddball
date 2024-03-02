@@ -454,6 +454,22 @@ parse_config:
       tap: $$mdi:pan-right$$
       hold: ''
       shifted: ''
+    "&mmv MOVE_LEFT":
+      tap: $$mdi:menu-left$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_RIGHT":
+      tap: $$mdi:menu-right$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_UP":
+      tap: $$mdi:menu-up$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_DOWN":
+      tap: $$mdi:menu-down$$
+      hold: ''
+      shifted: $$mdi:mouse$$
     "&mkp LCLK":
       tap: $$mdi:mouse-left-click-outline$$
     "&mkp RCLK":
@@ -502,7 +518,14 @@ parse_config:
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
       hold: $$mdi:bluetooth$$
-
+    "&bt BT_PRV":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: $$mdi:arrow-up-bold$$
+    "&bt BT_NXT":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: $$mdi:arrow-down-bold$$
     # Reset
     "&sys_reset":
       type: bootloader
@@ -647,12 +670,16 @@ parse_config:
 
     # Modifiers
     LCTRL: $$mdi:apple-keyboard-control$$
+    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
     LALT: $$mdi:apple-keyboard-option$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
+    LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
     LG: $$mdi:apple-keyboard-command$$
+    LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
+    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
     RALT: $$mdi:apple-keyboard-option$$
     RIGHT_ALT: $$mdi:apple-keyboard-option$$
     RSHIFT: $$mdi:apple-keyboard-shift$$
@@ -660,23 +687,32 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     RG: $$mdi:apple-keyboard-command$$
+    PSCRN: $$mdi:printer-outline$$
+    RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
-      tap: 'PageUp'
+      tap: 'PgUp'
       shifted: ''
     PAGE_DOWN:
-      tap: 'PageUp'
+      tap: 'PgDn'
       shifted: ''
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
+    UP_ARROW: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
+    DOWN_ARROW: $$mdi:arrow-down-bold$$
+    LEFT_ARROW: $$mdi:arrow-left-bold$$
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT: $$mdi:arrow-right-bold$$
+    RIGHT_ARROW: $$mdi:arrow-right-bold$$
 
     # Whitespace
     ENTER:
+      type: enter
+      tap: $$mdi:keyboard-return$$
+    RET:
       type: enter
       tap: $$mdi:keyboard-return$$
     ESC: $$mdi:keyboard-esc$$
@@ -718,11 +754,13 @@ parse_config:
     C_BRIGHTNESS_INC: $$mdi:brightness-5$$
     C_BRI_DN: $$mdi:brightness-7$$
     C_BRI_DEC: $$mdi:brightness-7$$
+    C_BRIGHTNESS_DEC: $$mdi:brightness-7$$
 
     # System
     C_POWER: $$mdi:power-standby$$
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
+    K_FIND: $$mdi:apple-finder$$
     # Command + 
     LG(A):
       tap: 'A'
