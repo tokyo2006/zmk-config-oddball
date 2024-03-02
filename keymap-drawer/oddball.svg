@@ -987,11 +987,11 @@ path.combo {
 </g>
 <g transform="translate(920, 120)" class="key keypos-20">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 83%">PageUp</tspan></text>
+<text x="0" y="0" class="key tap">PgUp</text>
 </g>
 <g transform="translate(1000, 130)" class="key keypos-21">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 83%">PageUp</tspan></text>
+<text x="0" y="0" class="key tap">PgDn</text>
 </g>
 <g transform="translate(1080, 150)" class="key keypos-22">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1617,17 +1617,17 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(840, 130)" class="key trans keypos-19">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(840, 130)" class="key keypos-19">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:mouse-left-click-outline" xlink:href="#mdi:mouse-left-click-outline" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:mouse-left-click-outline"/>
 </g>
-<g transform="translate(920, 120)" class="key trans keypos-20">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(920, 120)" class="key keypos-20">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:mouse-scroll-wheel"/>
 </g>
-<g transform="translate(1000, 130)" class="key trans keypos-21">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(1000, 130)" class="key keypos-21">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:mouse-right-click-outline"/>
 </g>
 <g transform="translate(1080, 150)" class="key trans keypos-22">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
