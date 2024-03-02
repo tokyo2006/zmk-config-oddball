@@ -1,5 +1,5 @@
 layers:
-  Base:
+  '0':
   - $$mdi:keyboard-esc$$
   - Q
   - W
@@ -81,7 +81,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Raise:
+  '1':
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - '@'
@@ -122,7 +122,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Shortcut:
+  '2':
   - {t: '$$mdi:transfer$$', type: trans}
   - '1'
   - '2'
@@ -163,7 +163,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Game:
+  '3':
   - {t: '$$mdi:transfer$$', type: trans}
   - '1'
   - '2'
@@ -190,7 +190,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Base, h: toggle}
+  - {t: '0', h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '6'
   - '7'
@@ -203,8 +203,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Base, h: toggle}
-  Mouse:
+  - {t: '0', h: toggle}
+  '4':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

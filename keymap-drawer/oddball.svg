@@ -460,8 +460,8 @@ path.combo {
     --color--key--border: var(--color--material--teal--100);
 }
 </style>
-<g transform="translate(0, 0)" class="layer-Base">
-<text x="0" y="0" class="label">Base</text>
+<g transform="translate(0, 0)" class="layer-0">
+<text x="0" y="0" class="label">0</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -901,8 +901,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(0, 774)" class="layer-Raise">
-<text x="0" y="0" class="label">Raise</text>
+<g transform="translate(0, 774)" class="layer-1">
+<text x="0" y="0" class="label">1</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1116,8 +1116,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(0, 1161)" class="layer-Shortcut">
-<text x="0" y="0" class="label">Shortcut</text>
+<g transform="translate(0, 1161)" class="layer-2">
+<text x="0" y="0" class="label">2</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1331,8 +1331,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(0, 1548)" class="layer-Game">
-<text x="0" y="0" class="label">Game</text>
+<g transform="translate(0, 1548)" class="layer-3">
+<text x="0" y="0" class="label">3</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1440,7 +1440,7 @@ path.combo {
 </g>
 <g transform="translate(200, 210)" class="key keypos-26">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">Base</text>
+<text x="0" y="0" class="key tap">0</text>
 <text x="0" y="34" class="key hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g transform="translate(280, 200)" class="key none keypos-27">
@@ -1493,7 +1493,7 @@ path.combo {
 </g>
 <g transform="translate(799, 303) rotate(-15.0)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">Base</text>
+<text x="0" y="0" class="key tap">0</text>
 <text x="0" y="34" class="key hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-0">
@@ -1538,8 +1538,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(0, 1935)" class="layer-Mouse">
-<text x="0" y="0" class="label">Mouse</text>
+<g transform="translate(0, 1935)" class="layer-4">
+<text x="0" y="0" class="label">4</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
