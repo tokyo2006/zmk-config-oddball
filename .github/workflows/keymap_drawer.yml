@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/keymap_draser.yml"
-      - "keymap-drawer/config.yaml"
+      - "keymap_drawer.config.yaml"
       - "config/**"
 
 jobs:
