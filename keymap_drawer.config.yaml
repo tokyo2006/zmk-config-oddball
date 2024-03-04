@@ -774,13 +774,13 @@ parse_config:
       tap: 'S'
       hold: $$mdi:apple-keyboard-command$$
     LG(D):
-      tap: 'S'
+      tap: 'D'
       hold: $$mdi:apple-keyboard-command$$
     LG(F):
-      tap: 'S'
+      tap: 'F'
       hold: $$mdi:apple-keyboard-command$$
     LG(Z):
-      tap: 'S'
+      tap: 'Z'
       hold: $$mdi:apple-keyboard-command$$
     LG(X):
       tap: 'X'
