@@ -23,3 +23,10 @@ jobs:
       destination: "both"
       parse_args: ""  # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
       draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
+  upload:
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        cloud-name: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+        api-key: ${{ secrets.CLOUDINARY_API_KEY }}
+        api-secret: ${{ secrets.CLOUDINARY_API_SECRET }}
+        image: "./keymap-drawer/oddball.svg"
