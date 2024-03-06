@@ -1,4 +1,4 @@
-name: Build ZMK firmware
+name: Upload keymap svg
 on:
   workflow_dispatch:
   push:
