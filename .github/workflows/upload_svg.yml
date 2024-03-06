@@ -1,0 +1,21 @@
+name: Build ZMK firmware
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "keymap-drawer/oddball.svg"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+    - uses: actions/checkout@v3.5.2
+
+    - name: upload
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+          cloud-name: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          api-key: ${{ secrets.CLOUDINARY_API_KEY }}
+          api-secret: ${{ secrets.CLOUDINARY_API_SECRET }}
+          image: "./keymap-drawer/oddball.svg"
