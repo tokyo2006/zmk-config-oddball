@@ -23,3 +23,15 @@ jobs:
       destination: "both"
       parse_args: ""  # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
       draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
+  upload_svg:
+    needs: draw
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - name: upload
+        uses: emmanuelgautier/cloudinary-upload-action@v1.0
+        with:
+            cloud-name: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+            api-key: ${{ secrets.CLOUDINARY_API_KEY }}
+            api-secret: ${{ secrets.CLOUDINARY_API_SECRET }}
+            image: "./keymap-drawer/oddball.svg"
