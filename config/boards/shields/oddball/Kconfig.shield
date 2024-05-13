@@ -2,13 +2,13 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_ODDBALL_CENTRAL_DONGLE
-    def_bool $(shields_list_contains,charybdisnano_central_dongle)
+    def_bool $(shields_list_contains,oddball_central_dongle)
 
 config SHIELD_ODDBALL_CENTRAL_LEFT
-    def_bool $(shields_list_contains,charybdisnano_central_left)
+    def_bool $(shields_list_contains,oddball_central_left)
     
 config SHIELD_ODDBALL_PERIPHERAL_LEFT
-    def_bool $(shields_list_contains,charybdisnano_peripheral_left)
+    def_bool $(shields_list_contains,oddball_peripheral_left)
 
 config SHIELD_ODDBALL_PERIPHERAL_RIGHT
-    def_bool $(shields_list_contains,charybdisnano_peripheral_right)
+    def_bool $(shields_list_contains,oddball_peripheral_right)
