@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "oddball.dtsi"
+#include "charybdisnano.dtsi"
 
 &kscan0 {
 	col-gpios
@@ -16,3 +16,4 @@
 		, <&pro_micro 8 GPIO_ACTIVE_HIGH>
 		;
 };
+
