@@ -82,29 +82,28 @@
   trackball_peripheral_auto_mouse_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&pd1>;
-        layers = <0 1 2 3 4>;
-		evt-type = <INPUT_EV_REL>;
-		x-input-code = <INPUT_REL_X>;
-		y-input-code = <INPUT_REL_WHEEL>;
-		scale-multiplier = <1>;
-		scale-divisor = <1>;
+        layers = <0>;
+	evt-type = <INPUT_EV_REL>;
+	x-input-code = <INPUT_REL_X>;
+	y-input-code = <INPUT_REL_WHEEL>;
+	scale-multiplier = <1>;
+	scale-divisor = <1>;
         bindings = <&ib_tog_layer 5>;
    };
 
    /* input config for mouse scroll mode on momentary mouse scoll layer */
-   trackball_peripheral_snipe_listener {
+   trackball_peripheral_scroll_listener {
            compatible = "zmk,input-behavior-listener";
            device = <&pd1>;
-           layers = <3>;
+           layers = <2>;
            evt-type = <INPUT_EV_REL>;
-           
            /* slienting x-axis with alt event code */
            x-input-code = <INPUT_REL_HWHEEL>;
            y-input-code = <INPUT_REL_WHEEL>;   
            /* invent scrolling direction */
            y-invert;
            /* align to CCW 45 degree */
-           rotate-deg = <315>;
+           rotate-deg = <180>;
            /* NOTE 1: This settings do not compitable with y-invert and x-invert */
            /* NOTE 2: Floating point computation requires alot of ram. */
            /*         This feature will cuase stackove flow with CONFIG_ZMK_USB_LOGGING=y *   
@@ -112,23 +111,20 @@
            /* NOTE: This behavior is different to scale-divisor. */
            /*       The delta value is accumlated until result >= 1 after cast. */
            /*       The scrolling is preented in hi-res and allow precise scrolling */
-           bindings = <&ib_wheel_scaler 1 8>;
+           bindings = <&ib_wheel_scaler_x 1 8 &ib_wheel_scaler_y 1 10>;
    };
 
-   /* the binding input behavior is a scrolling layer */
-   trackball_peripheral_scroll_listener {
-           compatible = "zmk,input-behavior-listener";
-           device = <&pd1>;
-           layers = <1 2>;
-           evt-type = <INPUT_EV_REL>;
-           
-           /* slienting x-axis with alt event code */
-           x-input-code = <INPUT_REL_MISC>;
-           y-input-code = <INPUT_REL_WHEEL>;
-           /* invent scrolling direction */
-           y-invert;
-           /* align to CCW 45 degree */
-           rotate-deg = <315>;
+   trackball_peripheral_snipe_listener {
+          compatible = "zmk,input-behavior-listener";
+          device = <&pd1>;
+          layers = <3>;
+          evt-type = <INPUT_EV_REL>;
+          x-input-code = <INPUT_REL_X>;
+          y-input-code = <INPUT_REL_Y>;
+          scale-multiplier = <1>;
+          scale-divisor = <1>;
+          /*rotate-deg = <315>;*/
+          bindings = <&ib_snipe_scaler_x 1 8 &ib_snipe_scaler_y 1 8>;
    };
 
    /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
@@ -139,11 +135,32 @@
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
-    ib_wheel_scaler: ib_wheel_scaler {
-            compatible = "zmk,input-behavior-scaler";
-            #binding-cells = <2>;
-            evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_WHEEL>;
+    ib_wheel_scaler_x: ib_wheel_scaler_x {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_WHEEL>;
+    };
+
+    ib_wheel_scaler_y: ib_wheel_scaler_y {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_HWHEEL>;
+    };
+
+    ib_snipe_scaler_x: ib_snipe_scaler_x {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_X>;
+    };
+
+    ib_snipe_scaler_y: ib_snipe_scaler_y {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_Y>;
     };
 };
 
