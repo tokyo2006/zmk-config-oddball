@@ -177,11 +177,13 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &msc SCRL_UP  &trans  &trans    &trans  &trans          &trans    &trans           &trans  &trans
-&trans  &trans   &msc SCRL_LEFT  &msc SCRL_DOWN &msc SCRL_RIGHT  &trans    &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans       &trans        &trans  &trans
-                        &trans  &trans  &trans                            &trans
+&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans    &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans    &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans     &trans     &trans     &trans  &trans
+                                &trans          &trans           &trans                       &trans
             >;
+
+            label = "Mouse";
         };
 
         Sniper {
