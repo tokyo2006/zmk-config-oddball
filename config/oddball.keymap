@@ -148,10 +148,10 @@
         Symbol {
             label = "Symbol";
             bindings = <
-&trans  &kp EXCL      &kp AT                  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS         &kp ASTERISK  &kp LPAR                        &kp RPAR                   &trans
-&trans  &kp ESCAPE    &kp CAPSLOCK            &kp HOME  &kp END   &kp UNDERSCORE    &kp MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP   &kp PAGE_DOWN                   &as PIPE NON_US_BACKSLASH  &trans
-&trans  &out OUT_TOG  &dongle_bootload_macro  &trans    &trans    &kp TILDE         &kp GRAVE  &as PLUS EQUAL   &kp SQT       &as DOUBLE_QUOTES SINGLE_QUOTE  &kp DELETE                 &trans
-                                              &trans    &trans    &trans                                        &trans
+&trans  &kp EXCL       &kp AT               &kp HASH              &kp DLLR        &kp PRCNT               &kp CARET             &kp AMPS         &kp ASTERISK         &kp LPAR                        &kp RPAR            &trans
+&trans  &kp ESCAPE     &kp CAPSLOCK         &kp HOME              &kp END         &as UNDERSCORE MINUS    &as UNDERSCORE MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP          &kp PAGE_DOWN                   &as PIPE BACKSLASH  &trans
+&trans  &kp BACKSPACE  &as COLON SEMICOLON  &as GREATER_THAN DOT  &as PLUS EQUAL  &as TILDE GRAVE         &as TILDE GRAVE       &as PLUS EQUAL   &as LESS_THAN COMMA  &as DOUBLE_QUOTES SINGLE_QUOTE  &kp DELETE          &trans
+                                            &trans                &trans          &trans                                                         &trans
             >;
         };
 
@@ -168,10 +168,10 @@
         Flash {
             label = "Flash";
             bindings = <
-&dongle_bootload_macro  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&bt BT_CLR              &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
-&bt BT_CLR_ALL          &none   &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
-                                        &trans  &trans  &trans                                &trans
+&dongle_bootload_macro  &trans  &trans        &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&bt BT_CLR              &trans  &trans        &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
+&bt BT_CLR_ALL          &none   &out OUT_TOG  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
+                                              &trans  &trans  &trans                                &trans
             >;
         };
 
@@ -199,10 +199,10 @@
 
         Number {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans        &kp LEFT_SHIFT  &trans        &trans        &trans        &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans          &trans        &trans        &trans        &trans
-                                    &trans        &trans        &trans                                  &trans
+&trans  &kp NUMBER_1   &kp NUMBER_2         &kp NUMBER_3             &kp NUMBER_4    &kp N5                  &kp NUMBER_6          &kp N7          &kp NUMBER_8          &kp NUMBER_9                    &kp NUMBER_0        &trans
+&trans  &kp ESCAPE     &kp CAPS             &kp HOME                 &kp END         &as UNDERSCORE MINUS    &as UNDERSCORE MINUS  &kp LEFT_SHIFT  &kp PAGE_UP           &kp PAGE_DOWN                   &as PIPE BACKSLASH  &trans
+&trans  &kp BACKSPACE  &as COLON SEMICOLON  &as GREATER_THAN PERIOD  &as PLUS EQUAL  &as TILDE GRAVE         &as TILDE GRAVE       &as PLUS EQUAL  &as LESS_THAN PERIOD  &as DOUBLE_QUOTES SINGLE_QUOTE  &kp DEL             &trans
+                                            &trans                   &trans          &trans                                                        &trans
             >;
 
             label = "Numberj";
