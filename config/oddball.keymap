@@ -205,7 +205,7 @@
                                             &trans                   &trans          &trans                                                        &trans
             >;
 
-            label = "Numberj";
+            label = "Number";
         };
     };
 
@@ -213,7 +213,7 @@
         compatible = "zmk,conditional-layers";
 
         Flash {
-            if-layers = <7 3>;
+            if-layers = <3 7>;
             then-layer = <4>;
         };
     };
