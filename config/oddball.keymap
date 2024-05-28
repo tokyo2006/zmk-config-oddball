@@ -199,10 +199,10 @@
 
         Number {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans        &trans        &trans        &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans        &trans        &trans        &trans
-                                    &trans        &trans        &trans                          &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans  &trans        &trans        &trans        &trans        &trans    &trans        &kp LEFT_SHIFT  &trans        &trans        &trans        &trans
+&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans          &trans        &trans        &trans        &trans
+                                    &trans        &trans        &trans                                  &trans
             >;
 
             label = "Numberj";
@@ -213,7 +213,7 @@
         compatible = "zmk,conditional-layers";
 
         Flash {
-            if-layers = <2 3>;
+            if-layers = <7 3>;
             then-layer = <4>;
         };
     };
