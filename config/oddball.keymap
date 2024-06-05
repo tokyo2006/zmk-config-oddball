@@ -42,13 +42,13 @@
 
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <2 3>;
+            key-positions = <4 3>;
             timeout-ms = <50>;
         };
 
         right_bkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             timeout-ms = <50>;
         };
 
