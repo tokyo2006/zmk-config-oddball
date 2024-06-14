@@ -73,7 +73,7 @@ layers:
   - $$mdi:volume-low$$
   - $$mdi:brightness-7$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&dongle_bootload_macro'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
