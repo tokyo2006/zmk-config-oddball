@@ -138,9 +138,9 @@
         Navi {
             label = "Navi";
             bindings = <
-&trans  &trans        &kp MINUS     &kp HOME          &kp PAGE_UP     &kp K_MUTE           &trans                &trans          &kp UP_ARROW            &trans     &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT  &trans  &trans
-&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp C_VOLUME_DOWN    &kp C_BRI_DEC         &trans          &dongle_bootload_macro  &trans     &trans  &trans
+&trans  &trans        &kp MINUS     &kp HOME          &kp PAGE_UP     &kp K_MUTE           &trans                &trans          &kp UP_ARROW    &trans     &trans  &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp C_VOLUME_DOWN    &kp C_BRI_DEC         &trans          &trans          &trans     &trans  &trans
                                     &trans            &trans          &trans                                                     &trans
             >;
         };
