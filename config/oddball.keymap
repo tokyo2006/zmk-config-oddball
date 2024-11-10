@@ -134,9 +134,9 @@
             label = "Qwery";
             bindings = <
 &as TILDE GRAVE  &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y  &kp U              &kp I                &kp O                    &hm LG(LS(V)) P      &kp DELETE
-&mkp LCLK        &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &lt 6 G         &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
+&mkp LCLK        &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
 &mkp RCLK        &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N  &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp ENTER
-                                                 &ltq 1 BACKSPACE    &ltq 3 TAB        &ltq 2 SPACE                              &ltq 7 SPACE
+                                                 &ltq 1 BACKSPACE    &ltq 3 TAB        &ltq 2 SPACE                              &ltq 2 SPACE
             >;
         };
 
@@ -200,17 +200,6 @@
             >;
 
             label = "Sniper";
-        };
-
-        Number {
-            bindings = <
-&trans  &kp NUMBER_1   &kp NUMBER_2         &kp NUMBER_3             &kp NUMBER_4    &kp N5                  &kp NUMBER_6          &kp N7          &kp NUMBER_8          &kp NUMBER_9                    &kp NUMBER_0        &trans
-&trans  &kp ESCAPE     &kp CAPS             &kp HOME                 &kp END         &as UNDERSCORE MINUS    &as UNDERSCORE MINUS  &kp LEFT_SHIFT  &kp PAGE_UP           &kp PAGE_DOWN                   &as PIPE BACKSLASH  &trans
-&trans  &kp BACKSPACE  &as COLON SEMICOLON  &as GREATER_THAN PERIOD  &as PLUS EQUAL  &as TILDE GRAVE         &as TILDE GRAVE       &as PLUS EQUAL  &as LESS_THAN PERIOD  &as DOUBLE_QUOTES SINGLE_QUOTE  &kp DEL             &trans
-                                            &trans                   &trans          &trans                                                        &trans
-            >;
-
-            label = "Number";
         };
     };
 
