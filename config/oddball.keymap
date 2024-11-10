@@ -87,6 +87,11 @@
             key-positions = <17 18>;
             timeout-ms = <50>;
         };
+
+        middle_btn {
+            bindings = <&mkp MCLK>;
+            key-positions = <12 24>;
+        };
     };
 
     behaviors {
@@ -128,9 +133,9 @@
         Qwery {
             label = "Qwery";
             bindings = <
-&kp ESCAPE       &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y  &kp U              &kp I                &kp O                    &hm LG(LS(V)) P      &kp DELETE
-&as TILDE GRAVE  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &lt 6 G         &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
-&kp ENTER        &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N  &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp ENTER
+&as TILDE GRAVE  &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y  &kp U              &kp I                &kp O                    &hm LG(LS(V)) P      &kp DELETE
+&mkp LCLK        &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &lt 6 G         &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
+&mkp RCLK        &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N  &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp ENTER
                                                  &ltq 1 BACKSPACE    &ltq 3 TAB        &ltq 2 SPACE                              &ltq 7 SPACE
             >;
         };
@@ -138,9 +143,9 @@
         Navi {
             label = "Navi";
             bindings = <
-&trans  &trans        &kp MINUS     &kp HOME          &kp PAGE_UP     &kp K_MUTE           &trans                &trans          &kp UP_ARROW    &trans     &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp C_VOLUME_DOWN    &kp C_BRI_DEC         &trans          &trans          &trans     &trans  &trans
+&trans  &trans        &kp MINUS     &kp HOME          &kp PAGE_UP     &kp K_MUTE           &trans                &kp HOME        &kp UP_ARROW    &kp PAGE_UP    &trans  &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &trans  &trans
+&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp C_VOLUME_DOWN    &kp C_BRI_DEC         &kp END         &trans          &kp PAGE_DOWN  &trans  &trans
                                     &trans            &trans          &trans                                                     &trans
             >;
         };
@@ -148,20 +153,20 @@
         Symbol {
             label = "Symbol";
             bindings = <
-&trans  &kp EXCL       &kp AT               &kp HASH              &kp DLLR        &kp PRCNT               &kp CARET             &kp AMPS         &kp ASTERISK         &kp LPAR                        &kp RPAR            &trans
-&trans  &kp ESCAPE     &kp CAPSLOCK         &kp HOME              &kp END         &as UNDERSCORE MINUS    &as UNDERSCORE MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP          &kp PAGE_DOWN                   &as PIPE BACKSLASH  &trans
-&trans  &kp BACKSPACE  &as COLON SEMICOLON  &as GREATER_THAN DOT  &as PLUS EQUAL  &as TILDE GRAVE         &as TILDE GRAVE       &as PLUS EQUAL   &as LESS_THAN COMMA  &as DOUBLE_QUOTES SINGLE_QUOTE  &kp DELETE          &trans
-                                            &trans                &trans          &trans                                                         &trans
+&trans  &kp EXCL       &kp AT        &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS         &kp ASTERISK                    &kp LPAR            &kp RPAR    &trans
+&trans  &kp ESCAPE     &kp CAPSLOCK  &kp HOME  &kp END   &kp UNDERSCORE    &kp MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP                     &kp PAGE_DOWN       &kp INSERT  &trans
+&trans  &kp BACKSPACE  &trans        &trans    &trans    &kp TILDE         &kp GRAVE  &as PLUS EQUAL   &as DOUBLE_QUOTES SINGLE_QUOTE  &as PIPE BACKSLASH  &kp DELETE  &trans
+                                     &trans    &trans    &trans                                        &trans
             >;
         };
 
         Modify {
             label = "Modify";
             bindings = <
-&trans  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)    &kp SLASH        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &kp KP_MULTIPLY  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS     &trans
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)    &kp PLUS         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans
-                              &trans     &trans     &trans                                      &trans
+&kp LG(Q)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9   &kp NUMBER_0       &trans
+&trans     &kp LG(A)     &kp LG(S)     &kp LG(D)     &kp LG(F)     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &trans
+&trans     &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp F1           &kp F2             &kp F3         &kp F4             &trans
+                                       &trans        &trans        &trans                                                  &trans
             >;
         };
 
