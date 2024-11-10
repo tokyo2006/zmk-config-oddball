@@ -1,6 +1,6 @@
 layers:
   Qwery:
-  - $$mdi:keyboard-esc$$
+  - {t: '`', h: '~', s: '~'}
   - Q
   - W
   - E
@@ -12,7 +12,7 @@ layers:
   - O
   - {t: P, s: '$$mdi:content-copy$$'}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '`', h: '~', s: '~'}
+  - $$mdi:mouse-left-click-outline$$
   - {t: A, s: '$$mdi:apple-keyboard-command$$'}
   - {t: S, s: '$$mdi:apple-keyboard-option$$'}
   - {t: D, s: '$$mdi:apple-keyboard-control$$'}
@@ -24,7 +24,7 @@ layers:
   - {t: L, s: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: ':', s: ':'}
   - {t: '''', h: '"', s: '"'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:mouse-right-click-outline$$
   - Z
   - X
   - C
@@ -48,9 +48,9 @@ layers:
   - PgUp
   - MUTE
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PgUp
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -72,9 +72,9 @@ layers:
   - PgDn
   - $$mdi:volume-low$$
   - $$mdi:brightness-7$$
+  - END
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -99,23 +99,23 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - HOME
   - END
-  - {t: '-', h: _, s: _}
-  - {t: '-', h: _, s: _}
+  - _
+  - {t: '-', s: _}
   - $$mdi:apple-keyboard-shift$$
   - PgUp
   - PgDn
-  - {t: \, h: '|', s: '|'}
+  - Ins
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ;, h: ':', s: ':'}
-  - {t: ., h: '>', s: '>'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '~'
+  - {t: '`', s: '~'}
   - {t: '=', h: +, s: +}
-  - {t: '`', h: '~', s: '~'}
-  - {t: '`', h: '~', s: '~'}
-  - {t: '=', h: +, s: +}
-  - {t: ',', h: <, s: <}
   - {t: '''', h: '"', s: '"'}
+  - {t: \, h: '|', s: '|'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -123,41 +123,41 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Modify:
-  - {t: '$$mdi:transfer$$', type: trans}
   - Gui+ Q
-  - Gui+ W
-  - Gui+ E
-  - Gui+ R
-  - Gui+ T
-  - {t: /, s: '?'}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
   - '7'
   - '8'
   - '9'
   - '0'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Gui+ A
-  - Gui+ S
-  - Gui+ D
-  - Gui+ F
-  - Gui+ G
-  - KP MULTIPLY
-  - '4'
-  - {t: '5', s: '%'}
-  - '6'
-  - {t: '-', s: _}
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Gui+ Z
-  - Gui+ X
-  - Gui+ C
-  - Gui+ V
-  - Gui+ B
-  - +
-  - '1'
-  - '2'
-  - '3'
-  - {t: '=', s: +}
+  - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  - '{'
+  - '}'
+  - F1
+  - F2
+  - F3
+  - F4
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -331,9 +331,9 @@ combos:
 - p: [0, 1]
   k: $$mdi:keyboard-esc$$
 - p: [4, 3]
-  k: '['
+  k: {t: '[', s: '{'}
 - p: [7, 8]
-  k: ']'
+  k: {t: ']', s: '}'}
 - p: [15, 16]
   k: (
 - p: [19, 20]
@@ -343,6 +343,8 @@ combos:
 - p: [31, 32]
   k: '}'
 - p: [5, 6]
-  k: \
+  k: {t: \, s: '|'}
 - p: [17, 18]
   k: '|'
+- p: [12, 24]
+  k: $$mdi:mouse-scroll-wheel$$
