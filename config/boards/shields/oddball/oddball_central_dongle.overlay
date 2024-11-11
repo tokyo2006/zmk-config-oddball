@@ -93,20 +93,20 @@
  /*  };*/
 
    /* input config for mouse scroll mode on momentary mouse scoll layer */
-   trackball_peripheral_scroll_listener {
-           compatible = "zmk,input-behavior-listener";
-           device = <&pd1>;
-           layers = <1>;
-           evt-type = <INPUT_EV_REL>;
+   /*trackball_peripheral_scroll_listener {*/
+   /*        compatible = "zmk,input-behavior-listener";*/
+   /*        device = <&pd1>;*/
+   /*        layers = <1>;*/
+   /*        evt-type = <INPUT_EV_REL>;*/
            /* slienting x-axis with alt event code */
-           x-input-code = <INPUT_REL_HWHEEL>;
-           y-input-code = <INPUT_REL_WHEEL>;   
+   /*        x-input-code = <INPUT_REL_HWHEEL>;*/
+   /*        y-input-code = <INPUT_REL_WHEEL>; */  
            /* invent scrolling direction */
-           y-invert;
+   /*        y-invert;*/
            /* align to CCW 45 degree */
-           rotate-deg = <180>;
-           scale-multiplier = <1>;
-           scale-divisor = <1>;
+   /*        rotate-deg = <180>;*/
+   /*        scale-multiplier = <1>;*/
+    /*       scale-divisor = <1>;*/
            /* NOTE 1: This settings do not compitable with y-invert and x-invert */
            /* NOTE 2: Floating point computation requires alot of ram. */
            /*         This feature will cuase stackove flow with CONFIG_ZMK_USB_LOGGING=y *   
@@ -114,13 +114,13 @@
            /* NOTE: This behavior is different to scale-divisor. */
            /*       The delta value is accumlated until result >= 1 after cast. */
            /*       The scrolling is preented in hi-res and allow precise scrolling */
-           bindings = <&ib_wheel_scaler_x 1 16 &ib_wheel_scaler_y 1 20>;
-   };
+     /*      bindings = <&ib_wheel_scaler_x 1 16 &ib_wheel_scaler_y 1 20>;*/
+   /*};*/
 
    trackball_peripheral_snipe_listener {
           compatible = "zmk,input-behavior-listener";
           device = <&pd1>;
-          layers = <2 3>;
+          layers = <1 2 3>;
           evt-type = <INPUT_EV_REL>;
           x-input-code = <INPUT_REL_X>;
           y-input-code = <INPUT_REL_Y>;
