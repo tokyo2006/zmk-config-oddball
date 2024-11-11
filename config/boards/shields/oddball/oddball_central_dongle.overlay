@@ -105,6 +105,8 @@
            y-invert;
            /* align to CCW 45 degree */
            rotate-deg = <180>;
+           scale-multiplier = <1>;
+           scale-divisor = <1>;
            /* NOTE 1: This settings do not compitable with y-invert and x-invert */
            /* NOTE 2: Floating point computation requires alot of ram. */
            /*         This feature will cuase stackove flow with CONFIG_ZMK_USB_LOGGING=y *   
@@ -112,7 +114,7 @@
            /* NOTE: This behavior is different to scale-divisor. */
            /*       The delta value is accumlated until result >= 1 after cast. */
            /*       The scrolling is preented in hi-res and allow precise scrolling */
-           bindings = <&ib_wheel_scaler_x 1 16 &ib_wheel_scaler_y 1 48>;
+           bindings = <&ib_wheel_scaler_x 1 1600 &ib_wheel_scaler_y 1 1600>;
    };
 
    trackball_peripheral_snipe_listener {
