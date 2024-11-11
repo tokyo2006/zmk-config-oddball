@@ -144,8 +144,8 @@
             label = "Navi";
             bindings = <
 &trans  &trans        &kp MINUS     &kp HOME          &kp PAGE_UP     &kp K_MUTE           &trans                &kp HOME        &kp UP_ARROW    &kp PAGE_UP    &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &trans  &trans
-&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp C_VOLUME_DOWN    &kp C_BRI_DEC         &kp END         &trans          &kp PAGE_DOWN  &trans  &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_VOLUME_UP      &msc SCRL_UP          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp C_BRIGHTNESS_INC  &trans
+&trans  &trans        &trans        &kp END           &kp PAGE_DOWN   &kp C_VOLUME_DOWN    &msc SCRL_DOWN        &kp END         &trans          &kp PAGE_DOWN  &kp C_BRIGHTNESS_DEC  &trans
                                     &trans            &trans          &trans                                                     &trans
             >;
         };
