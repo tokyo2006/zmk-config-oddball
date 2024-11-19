@@ -127,6 +127,7 @@
 
         Qwery {
             label = "Qwery";
+            display-name = "Qwery"; 
             bindings = <
 &kp ESCAPE       &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y  &kp U              &kp I                &kp O                    &hm LG(LS(V)) P      &kp DELETE
 &as TILDE GRAVE  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &lt 6 G         &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON  &as DOUBLE_QUOTES SINGLE_QUOTE
@@ -147,6 +148,7 @@
 
         Symbol {
             label = "Symbol";
+            display-name = "Symbol"; 
             bindings = <
 &trans  &kp EXCL       &kp AT               &kp HASH              &kp DLLR        &kp PRCNT               &kp CARET             &kp AMPS         &kp ASTERISK         &kp LPAR                        &kp RPAR            &trans
 &trans  &kp ESCAPE     &kp CAPSLOCK         &kp HOME              &kp END         &as UNDERSCORE MINUS    &as UNDERSCORE MINUS  &kp RIGHT_SHIFT  &kp PAGE_UP          &kp PAGE_DOWN                   &as PIPE BACKSLASH  &trans
@@ -157,6 +159,7 @@
 
         Modify {
             label = "Modify";
+            display-name = "Modify"; 
             bindings = <
 &trans  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)    &kp SLASH        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
 &trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &kp KP_MULTIPLY  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS     &trans
@@ -167,6 +170,7 @@
 
         Flash {
             label = "Flash";
+            display-name = "Flash"; 
             bindings = <
 &dongle_bootload_macro  &trans  &trans        &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &bt BT_CLR              &trans  &trans        &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
@@ -184,6 +188,7 @@
             >;
 
             label = "Mouse";
+            display-name = "Mouse"; 
         };
 
         Sniper {
@@ -195,6 +200,7 @@
             >;
 
             label = "Sniper";
+            display-name = "Sniper"; 
         };
 
         Number {
@@ -206,6 +212,7 @@
             >;
 
             label = "Number";
+            display-name = "Number";
         };
     };
 

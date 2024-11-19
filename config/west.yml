@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,6 +19,9 @@ manifest:
       revision: main
     - name: zmk-input-behavior-listener
       remote: badjeff
+      revision: main
+    - name: prospector-zmk-module
+      remote: tokyo2006
       revision: main
   self:
     path: config
