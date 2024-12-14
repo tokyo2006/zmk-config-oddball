@@ -3,165 +3,19 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#include <dt-bindings/zmk/matrix_transform.h>
-
-#define INPUT_EV_KEY 0x01               /**< Key event */
-#define INPUT_EV_REL 0x02               /**< Relative coordinate event */
-#define INPUT_EV_ABS 0x03               /**< Absolute coordinate event */
-#define INPUT_EV_MSC 0x04               /**< Miscellaneous event */
-#define INPUT_EV_VENDOR_START 0xf0      /**< Vendor specific event start */
-#define INPUT_EV_VENDOR_STOP 0xff       /**< Vendor specific event stop */
-
-#define INPUT_REL_X 0x00                /**< Relative X coordinate */
-#define INPUT_REL_Y 0x01                /**< Relative Y coordinate */
-#define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
-#define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
-#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
-
+#include "oddball.dtsi"
+#include "oddball_trackball.dtsi"
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,matrix-transform = &default_transform;
         zephyr,display = &oled;
     };
-
-    default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
-        columns = <12>;
-        rows = <4>;
-        map = <
-	RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6)  RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11)
-	RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6)  RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11)
-	RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6)  RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11)
-							RC(3,2) RC(3,3) RC(3,4) RC(3,10)
-      >;
-    };
-
     mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
         events = <0>;
-    };
-};
-
-#include "oddball_trackball.dtsi"
-
-/ {
-	/* define virtual input, will be resurrected for emitting input event */
-	/* NOTE: set `device = <&pd1>` in `zmk,input-listener` */
-	pd1: virtual_input {
-		compatible = "zmk,virtual-input";
-	};
-};
-
-/ {
-	/* for central side, define (relay-channel)-to-(virtual-input) mapping */
-	input_relay_config_102 {
-		compatible = "zmk,split-peripheral-input-relay";
-		
-		/* channel id, used to filter incoming annotated input event from split peripheral */
-		/* NOTE: should matching relay-channel on peripheral overlay */
-		relay-channel = <102>;
-
-		/* virtual input device on central, which used to emit input event as an agent device */
-		device = <&pd1>;
-	};
-};
-
-/{
-  trackball_listener { 
-    compatible = "zmk,input-listener";
-    device = <&pd1>;
-  };
-};
-
-/{
-  /* auto toggle mouse key layer */
-  trackball_peripheral_auto_mouse_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&pd1>;
-        layers = <0>;
-        rotate-deg = <315>;
-	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_X>;
-	    y-input-code = <INPUT_REL_WHEEL>;
-	    scale-multiplier = <1>;
-	    scale-divisor = <1>;
-        bindings = <&ib_tog_layer 5>;
-   };
-
-   /* input config for mouse scroll mode on momentary mouse scoll layer */
-   trackball_peripheral_scroll_listener {
-           compatible = "zmk,input-behavior-listener";
-           device = <&pd1>;
-           layers = <1 2 3 4>;
-           evt-type = <INPUT_EV_REL>;
-           /* slienting x-axis with alt event code */
-           x-input-code = <INPUT_REL_HWHEEL>;
-           y-input-code = <INPUT_REL_WHEEL>;   
-           /* invent scrolling direction */
-           y-invert;
-           /* align to CCW 45 degree */
-           rotate-deg = <180>;
-           /* NOTE 1: This settings do not compitable with y-invert and x-invert */
-           /* NOTE 2: Floating point computation requires alot of ram. */
-           /*         This feature will cuase stackove flow with CONFIG_ZMK_USB_LOGGING=y *   
-           /* bind a behavior to down scaling input value to (1/8) */
-           /* NOTE: This behavior is different to scale-divisor. */
-           /*       The delta value is accumlated until result >= 1 after cast. */
-           /*       The scrolling is preented in hi-res and allow precise scrolling */
-           bindings = <&ib_wheel_scaler_x 1 8 &ib_wheel_scaler_y 1 10>;
-   };
-
-   trackball_peripheral_snipe_listener {
-          compatible = "zmk,input-behavior-listener";
-          device = <&pd1>;
-          layers = <6>;
-          evt-type = <INPUT_EV_REL>;
-          x-input-code = <INPUT_REL_X>;
-          y-input-code = <INPUT_REL_Y>;
-          scale-multiplier = <1>;
-          scale-divisor = <1>;
-          rotate-deg = <315>;
-          bindings = <&ib_snipe_scaler_x 1 8 &ib_snipe_scaler_y 1 8>;
-   };
-
-   /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
-   ib_tog_layer: ib_tog_layer {
-        compatible = "zmk,input-behavior-tog-layer";
-        #binding-cells = <1>;
-        time-to-live-ms = <2000>;
-    };
-
-    /* define a resolution down scaler only for INPUT_REL_WHEEL */
-    ib_wheel_scaler_x: ib_wheel_scaler_x {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_WHEEL>;
-    };
-
-    ib_wheel_scaler_y: ib_wheel_scaler_y {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_HWHEEL>;
-    };
-
-    ib_snipe_scaler_x: ib_snipe_scaler_x {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_X>;
-    };
-
-    ib_snipe_scaler_y: ib_snipe_scaler_y {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_Y>;
     };
 };
 

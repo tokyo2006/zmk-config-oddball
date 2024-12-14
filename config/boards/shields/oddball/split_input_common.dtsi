@@ -1,0 +1,39 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+#define DEF 0
+#define NAVI 1
+#define SYM 2
+#define NUM 3
+#define FLASH 4
+#define GAME 5 
+
+/ {
+  split_inputs {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    trackball_split: trackball_split@0 {
+      compatible = "zmk,input-split";
+      reg = <0>;
+    };
+  };
+
+  trackball_listener: trackball_listener {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split>;
+
+    snipe {
+      layers = <NUM>;
+      input-processors = <&zip_xy_scaler 1 3>;
+    };
+
+    scroll {
+      layers = <SYM>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 3>, <&zip_xy_to_scroll_mapper>;
+    };
+  };
+
+
+};
