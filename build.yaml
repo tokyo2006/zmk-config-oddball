@@ -20,7 +20,7 @@ include:
     shield: oddball_central_dongle dongle_display
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: corne_studio_dongle
+    artifact-name: oddball_studio_dongle
   - board: nice_nano_v2
     shield: oddball_peripheral_left
     artifact-name: oddball_peripheral_left
